@@ -19,7 +19,7 @@ public class Student {
         Name = Name_;
     }
     public String getId(){
-        
+        return Id;
     }
     public void setId(String Id_){
         Id = Id_;
@@ -27,13 +27,13 @@ public class Student {
     public String getGroup(){
         return Group;
     }
-    public String setGroup(String Group_){
+    public void setGroup(String Group_){
         Group = Group_;
     }
     public String getEmail(){
         return Email;
     }
-    public String setEmail(String Email_){
+    public void setEmail(String Email_){
         Email = Email_;
     }
     /**
@@ -63,6 +63,10 @@ public class Student {
 
     String getInfo() {
         // TODO:
+        System.out.printf("Ho va ten: %s \nMSSV: %s \nClass: %s /Email: %s", Name,Id,Group,Email);
+        
         return null; // xóa dòng này sau khi cài đặt
     }
+    
+    
 }
