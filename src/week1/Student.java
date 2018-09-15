@@ -11,7 +11,7 @@ public class Student {
     
     
     
-    // TODO: khai báo các phương thức getter, setter cho Student
+    // TODO: khai báo các phương thức getter, setter cho Student 
     public String getName(){
         return Name;
     }
@@ -41,6 +41,11 @@ public class Student {
      */
     Student() {
         // TODO:
+        Name = "Student";
+        Id = "000";
+        Group = "INT22041";
+        Email = "uet@vnu.edu.vn";
+        
     }
 
     /**
@@ -51,6 +56,10 @@ public class Student {
      */
     Student(String n, String sid, String em) {
         // TODO:
+        Name = n;
+        Id = sid;
+        Email = em;
+        Group = "INT22041";
     }
 
     /**
@@ -59,14 +68,18 @@ public class Student {
      */
     Student(Student s) {
         // TODO:
+        Name = s.Name;
+        Id = s.Id;
+        Group = s.Group;
+        Email = s.Email;
     }
 
     String getInfo() {
         // TODO:
-        System.out.printf("Ho va ten: %s \nMSSV: %s \nClass: %s /Email: %s", Name,Id,Group,Email);
         
-        return null; // xóa dòng này sau khi cài đặt
+        return "Ten: "+Name + "\n" + "MSSV: " + Id + "\n" + "Lop: " + Group + "\n" + "Email: " + Email; // xóa dòng này sau khi cài đặt
     }
+    
     
     
 }
