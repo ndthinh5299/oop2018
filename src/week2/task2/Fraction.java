@@ -58,11 +58,7 @@ public class Fraction {
      */
     public Fraction add(Fraction other) {
         //TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
-        return new Fraction(this.numerator * other.denomirator + this.denomirator * other.numerator , this.denomirator * other.denomirator);
-        
-        
-        
-        
+        return new Fraction(this.numerator * other.denomirator + this.denomirator * other.numerator , this.denomirator * other.denomirator);   
     }
 
     public Fraction subtract(Fraction other) {
@@ -83,12 +79,18 @@ public class Fraction {
         return a;
     }
     
-    public boolean equals(Fraction obj){
-        return (this.numerator == obj.numerator && this.denomirator == obj.denomirator);
+    public boolean equals(Object obj){
+        if(obj instanceof Fraction){
+        Fraction other = (Fraction) obj;
+        return (this.numerator == other.numerator && this.denomirator == other.denomirator);
+        
+        }
+        
+        else return false;
     }
     public static void main(String[] args) {
         Fraction a = new Fraction(1, 3);
-        Fraction b = new Fraction(3, 9);
+        Fraction b = new Fraction(2, 3);
         
         if(a.equals(b)) System.out.println("hai phan so bang nhau");
         else System.out.println("hai phan so khac nhau");
@@ -96,7 +98,7 @@ public class Fraction {
         System.out.print("tong hai phan so là: ");
         System.out.println(a.add(b).displayFraction());
         System.out.print("hieu hai phan so la: ");
-        System.out.println(a.divide(b).displayFraction());
+        System.out.println(a.subtract(b).displayFraction());
         System.out.print("tich hai phan so la: ");
         System.out.println(a.multiply(b).displayFraction());
         System.out.print("thuong hai phan so: ");

@@ -5,12 +5,12 @@ public class Task1 {
     public static int gcd(int m, int n) {
         // TODO: Tính ước chung lớn nhất của 2 số m, n
         if(m<n){
-        if(m==0) return n;
-        else return gcd(n%m,m);
+            if(m==0) return n;
+            else return gcd(n%m,m);
     }
-    else
-    if(n==0) return m;
-    else return gcd(m%n,n);
+        else
+            if(n==0) return m;
+            else return gcd(m%n,n);
        
     }
 
