@@ -13,12 +13,24 @@ package week4.task2;
  * @since 1900
  */
 public class Rectangle extends Shape{
-    private double width = 1.0;
-    private double length = 1.0;
+    private double width ;
+    private double length;
 /**
  * đây là phương thức khởi tao không tham số
  */
-    public Rectangle() {}
+    public Rectangle() {
+        this.width = 1.0;
+        this.length = 1.0;
+    }
+/**
+ * 
+ * @param side
+ * @param length 
+ */
+    public Rectangle(double side, double length) {
+        this.width = side;
+        this.length = length;
+    }
 /**
  * đây là phương thức khởi tao có tham số 
  * @param width_ chiều rộng hcn muốn khởi tao
@@ -26,6 +38,7 @@ public class Rectangle extends Shape{
  * @param color_ màu sắc hình chữ nhật muốn khởi tạo
  * @param filled_ tình trạng filled hình chữ nhật muốn khởi tao
  */
+    
     public Rectangle(double width_, double length_, String color_, boolean  filled_){
         this.width=width_;
         this.color = color_;
@@ -66,11 +79,9 @@ public class Rectangle extends Shape{
     public double getPerimeter(){
         return 2*(length+width);
     }
-    public static void main(String[] args) {
-        Rectangle r = new Rectangle(2, 3, "Red", true);
-        System.out.println("chu vi: " + r.getPerimeter());
-        System.out.println("Dien tich: " + r.getArea());
-        
+    @Override
+    public String toString(){
+        return "{" + width + ", " + length + "}";
     }
     
 }

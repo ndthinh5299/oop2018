@@ -14,11 +14,13 @@ package week4.task2;
  */
 public class Circle extends Shape{
     private final double PI = 3.14;
-    private double radius = 1.0;
+    private double radius ;
 /**
  * đây là phương thức khởi tạo ko tham số
  */
-    public Circle() {}
+    public Circle() {
+        this.radius = 1.0;
+    }
 /**
  * đây là phương thức khởi tạo có tham số
  * @param radius_ đây là tham số thứ nhất, là bán kính muốn khởi tạo 
@@ -58,9 +60,8 @@ public class Circle extends Shape{
     public double getPerimeter(){
         return 2 * PI * radius;
     }
-    public static void main(String[] args) {
-        Circle c = new Circle(2.0, "blue", true);
-        System.out.println("chu vi: " + c.getPerimeter());
-        System.out.println("Dien tich: " + c.getArea());
-    }
+    @Override 
+    public String toString(){
+    return "{" + radius + "}";
+}
 }

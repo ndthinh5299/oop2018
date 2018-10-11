@@ -11,12 +11,15 @@ package week4.task2;
  * @since 2018-09-10
  */
 public class Shape {
-    protected String color = "red";
-    boolean filled = true;
+    protected String color;
+    boolean filled ;
     /**
      * phương thức khởi tạo không có tham số
      */
-    public Shape(){}
+    public Shape(){
+        color = "red";
+        filled = true;
+    }
     /**
      * phương thưc khởi tao có tham số
      * @param color_ đây la tham số đầu tiên 
@@ -55,11 +58,11 @@ public class Shape {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
-    public static void main(String[] args) {
-        Shape test1 = new Shape();
-        Shape test2 = new Shape("blue", false);
-        System.out.println("tes1: " + test1.getColor()+ "," + test1.isFilled());
-        System.out.println("test2: "+ test2.getColor() +"," +test2.isFilled());
+    //ghi đè phương thức
+    @Override
+    public String toString(){
+        String fill = filled? "filled" : "not filled";
+        return "{" + this.color + "," + fill + "}";
     }
 }
     

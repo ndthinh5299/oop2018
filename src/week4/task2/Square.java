@@ -13,17 +13,16 @@ package week4.task2;
  * @since 1975
  */
 public class Square extends Rectangle{
-    private double side =1.0;
-/**
- * phương thức khởi tạo mặc định
- */    
-    public Square(){}
+    
+    public Square(){
+        super();
+    }
 /**
  * phương thức khởi tạo 1 tham số
  * @param side_ cạnh hình vuông muốn cài đặt
  */    
     public Square(double side_){
-        this.side = side_;
+        super(side_, side_);
     }
 /**
  * phương thức khởi tao 3 tham số
@@ -32,7 +31,7 @@ public class Square extends Rectangle{
  * @param filled_ tình trạng filled 
  */
     public Square(double side_, String color_, boolean filled_ ){
-        this.side = side_;
+        super(side_, side_);
         this.color = color_;
         this.filled = filled_;
     }
@@ -41,14 +40,15 @@ public class Square extends Rectangle{
  * @return double cạnh của hình vuông
  */
     public double getSide() {
-        return side;
+        return super.getLength();
     }
 /**
  * setter thuộc tính side
  * @param side tham số là cạnh góc vuông muốn truyền vào
  */
     public void setSide(double side) {
-        this.side = side;
+        super.setLength(side);
+        super.setWidth(side);
     }
 /**
  * phương thức ghi đè từ lớp cha
@@ -57,7 +57,7 @@ public class Square extends Rectangle{
  */
     @Override
     public void setWidth(double side) {
-        this.side = side;
+        setSide(side);
     }
 /**
  * phương thức ghi đè từ lớp cha
@@ -65,12 +65,10 @@ public class Square extends Rectangle{
  */
     @Override
     public void setLength(double side) {
-        this.side = side;
+        setSide(side);
     }
-    public static void main(String[] args) {
-        Square a = new Square(2.0);
-        System.out.println("a.getSide() == " + a.getSide());
-        System.out.println("a.getColor() == " + a.getColor());
-        
+    @Override
+    public String toString(){
+        return "{" + super.getWidth() + "}";
     }
 }
