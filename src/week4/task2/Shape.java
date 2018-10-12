@@ -12,7 +12,7 @@ package week4.task2;
  */
 public class Shape {
     protected String color;
-    boolean filled ;
+    protected boolean filled ;
     /**
      * phương thức khởi tạo không có tham số
      */

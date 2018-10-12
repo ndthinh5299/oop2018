@@ -10,8 +10,8 @@ package week4.task1;
  * @author thinhnguyen
  */
 public class Cam extends HoaQua{
-    private String mauSac ;
-    private String tinhTrang;
+    protected String mauSac ;
+    protected String tinhTrang;
     /**
      * đây là getter thuộc tính mauSac
      * @return String là màu sắc của quả Cam

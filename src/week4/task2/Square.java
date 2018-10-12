@@ -23,7 +23,7 @@ public class Square extends Rectangle{
  */    
     public Square(double side_){
         super(side_, side_);
-    }
+    }   
 /**
  * phương thức khởi tao 3 tham số
  * @param side_ cạnh hình vuông muốn khởi tao

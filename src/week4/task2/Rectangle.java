@@ -13,8 +13,8 @@ package week4.task2;
  * @since 1900
  */
 public class Rectangle extends Shape{
-    private double width ;
-    private double length;
+    protected double width ;
+    protected double length;
 /**
  * đây là phương thức khởi tao không tham số
  */
