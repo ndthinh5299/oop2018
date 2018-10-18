@@ -79,6 +79,7 @@ public class Fraction {
         return a;
     }
     
+   @Override
     public boolean equals(Object obj){
         if(obj instanceof Fraction){
         Fraction other = (Fraction) obj;
