@@ -57,7 +57,7 @@ public class Main {
 //
             layer.printLayer();
             layer.removeTriangle();
-            layer.removesame();
+         //   layer.removesame();
 //        //layer.removeCircle();
 //        //layer.printLayer();
 //

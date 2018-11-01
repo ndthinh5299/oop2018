@@ -74,7 +74,7 @@ public class Circle extends Shape{
     @Override
     public String toString() {
         return "Hình tròn có bán kính là: " + this.getRadius()
-                + " \t Tâm là:  " + a;
+                + " \t Tâm là:  " + a ;
     }
     @Override
     public boolean equals(Object object){

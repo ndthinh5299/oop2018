@@ -34,29 +34,29 @@ public class Diagram {
             listLayer.get(i).removeCircle();
         }
     }
-    public void sortLayer() {
-        Layer circles = new Layer();
-        Layer triangles = new Layer();
-        Layer rectangles = new Layer();
-        Layer squares = new Layer();
-        Layer hexagons = new Layer();
-
-
-        for (Layer layer : listLayer) {
-            for (Shape shape : layer.getList()) {
-                if (shape instanceof Circle) circles.getList().add(shape);
-                if (shape instanceof Triangle) triangles.getList().add(shape);
-                if (shape instanceof Rectangle) rectangles.getList().add(shape);
-                if (shape instanceof Square) squares.getList().add(shape);
-                if (shape instanceof Hexagon) hexagons.getList().add(shape);
-
-            }
-        }
-        listLayer.clear();
-        listLayer.add(circles);
-        listLayer.add(triangles);
-        listLayer.add(rectangles);
-        listLayer.add(squares);
-        listLayer.add(hexagons);
-    }
+//    public void sortLayer() {
+//        Layer circles = new Layer();
+//        Layer triangles = new Layer();
+//        Layer rectangles = new Layer();
+//        Layer squares = new Layer();
+//        Layer hexagons = new Layer();
+//
+//
+//        for (Layer layer : listLayer) {
+//            for (Shape shape : layer.getList()) {
+//                if (shape instanceof Circle) circles.getList().add(shape);
+//                if (shape instanceof Triangle) triangles.getList().add(shape);
+//                if (shape instanceof Rectangle) rectangles.getList().add(shape);
+//                if (shape instanceof Square) squares.getList().add(shape);
+//                if (shape instanceof Hexagon) hexagons.getList().add(shape);
+//
+//            }
+//        }
+//        listLayer.clear();
+//        listLayer.add(circles);
+//        listLayer.add(triangles);
+//        listLayer.add(rectangles);
+//        listLayer.add(squares);
+//        listLayer.add(hexagons);
+//    }
 }
